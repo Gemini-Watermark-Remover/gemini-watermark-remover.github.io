@@ -20,17 +20,14 @@
     <meta property="og:title" content="Gemini Watermark Remover | Free AI Image Cleaner">
     <meta property="og:description"
         content="Free online tool to gracefully remove Gemini AI (SynthID) watermarks from images. 100% private, secure, client-side processing using precise reverse alpha blending.">
-    <meta property="og:image"
-        content="https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=1200&auto=format&fit=crop">
-    <!-- Note: Replace the og:image URL with a real screenshot of your app hosted on your github later -->
+    <meta property="og:image" content="https://gemini-watermark-remover.github.io/preview.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Gemini Watermark Remover | Free AI Image Cleaner">
     <meta property="twitter:description"
         content="Free online tool to gracefully remove Gemini AI (SynthID) watermarks from images. 100% private, secure, client-side processing.">
-    <meta property="twitter:image"
-        content="https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=1200&auto=format&fit=crop">
+    <meta property="twitter:image" content="https://gemini-watermark-remover.github.io/preview.png">
 
     <!-- Tailwind CSS directly via CDN for vanilla setup -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -351,6 +348,126 @@
                 <!-- Dynamite generated dynamically -->
             </div>
         </div>
+
+        <!-- SEO Content Section -->
+        <section class="w-full max-w-4xl mt-32 space-y-20 px-4 md:px-0">
+            <!-- How it Works -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">How It Works</h3>
+                    <p class="text-slate-400 leading-relaxed mb-4">
+                        Google's Gemini AI uses a technology called <strong class="text-teal-400">SynthID</strong> to
+                        embed digital watermarks into the pixels of generated images. Unlike traditional visible logos,
+                        these are often invisible or extremely subtle.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed">
+                        Our tool uses <strong class="text-slate-200">Reverse Alpha Blending</strong>. By mathematically
+                        isolating the watermark's transparency layer (the alpha map), we can accurately calculate the
+                        original pixel values hidden beneath, restoring your image losslessly.
+                    </p>
+                </div>
+                <div class="glass-panel rounded-3xl p-8 border border-white/5 space-y-6">
+                    <div class="flex gap-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-teal-500/10 flex-shrink-0 flex items-center justify-center text-teal-400">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">100% Private</h4>
+                            <p class="text-sm text-slate-500">Processing happens entirely in your browser. No images are
+                                ever uploaded to a server.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-blue-500/10 flex-shrink-0 flex items-center justify-center text-blue-400">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Instant Results</h4>
+                            <p class="text-sm text-slate-500">Blazing fast removal using optimized JavaScript canvas
+                                operations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="space-y-12">
+                <h3 class="text-3xl font-bold text-center">Frequently Asked Questions</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="glass-panel p-6 rounded-2xl border border-white/5">
+                        <h4 class="font-bold text-white mb-3 flex items-center gap-2">
+                            <span class="text-teal-400">Q:</span> Is this tools free to use?
+                        </h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Yes, GeminiClear is completely free and open source. We believe everyone should have access
+                            to clean versions of their AI creations.
+                        </p>
+                    </div>
+                    <div class="glass-panel p-6 rounded-2xl border border-white/5">
+                        <h4 class="font-bold text-white mb-3 flex items-center gap-2">
+                            <span class="text-teal-400">Q:</span> Does it work on all images?
+                        </h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            It is specifically optimized for images generated by Google Gemini. It detects the unique
+                            SynthID patterns and removes them precisely.
+                        </p>
+                    </div>
+                    <div class="glass-panel p-6 rounded-2xl border border-white/5">
+                        <h4 class="font-bold text-white mb-3 flex items-center gap-2">
+                            <span class="text-teal-400">Q:</span> Will it lower image quality?
+                        </h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            No. Unlike AI 'inpainting' which guesses pixels, our tool uses math to reverse the watermark
+                            blending, meaning you get the exact original pixels back.
+                        </p>
+                    </div>
+                    <div class="glass-panel p-6 rounded-2xl border border-white/5">
+                        <h4 class="font-bold text-white mb-3 flex items-center gap-2">
+                            <span class="text-teal-400">Q:</span> Can I use it on mobile?
+                        </h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Absolutely! The site is fully responsive and works perfectly on iPhones, Androids, and
+                            tablets directly in your mobile browser.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full max-w-4xl mt-32 pt-12 pb-8 border-t border-white/5 text-center">
+            <div class="flex flex-col items-center gap-6">
+                <div class="flex items-center gap-3 opacity-60 grayscale hover:grayscale-0 transition-all">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight">GeminiClear</span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm text-slate-500">
+                    <a href="#" class="hover:text-teal-400 transition-colors">Documentation</a>
+                    <a href="https://github.com/GargantuaX/gemini-watermark-remover" target="_blank"
+                        class="hover:text-teal-400 transition-colors">Source Code</a>
+                    <a href="#" class="hover:text-teal-400 transition-colors">Privacy Policy</a>
+                </div>
+                <p class="text-[10px] text-slate-600 uppercase tracking-[0.2em]">
+                    &copy; 2024 GeminiClear. Not affiliated with Google.
+                </p>
+            </div>
+        </footer>
     </main>
 
     <!-- App Logic -->
