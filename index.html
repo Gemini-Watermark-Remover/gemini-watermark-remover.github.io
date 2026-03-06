@@ -204,9 +204,9 @@
 
     <main class="flex-grow pt-32 pb-24 px-6 relative z-10 w-full max-w-7xl mx-auto flex flex-col items-center">
         <!-- Hero Section -->
-        <div class="text-center max-w-3xl mb-16 animate-float">
+        <div class="text-center max-w-3xl mb-12 md:mb-16 animate-float">
             <div
-                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-sm font-medium mb-6">
+                class="inline-flex items-center gap-2 px-4 py-1.5 md:px-3 md:py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs md:text-sm font-medium mb-6 md:mb-8">
                 <span class="relative flex h-2 w-2">
                     <span
                         class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
@@ -214,11 +214,12 @@
                 </span>
                 100% Client-Side Processing
             </div>
-            <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-                Remove Watermarks <br />
+            <h2 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-4 md:mb-6 leading-tight px-2">
+                Remove Watermarks <br class="hidden sm:block" />
                 <span class="gradient-text">Losslessly.</span>
             </h2>
-            <p class="text-lg md:text-xl text-slate-400 font-light max-w-2xl mx-auto leading-relaxed">
+            <p
+                class="text-base sm:text-lg md:text-xl text-slate-400 font-light max-w-2xl mx-auto leading-relaxed px-4 md:px-0">
                 Unlock the true potential of your Gemini AI generated images with our mathematically precise reverse
                 alpha blending algorithm.
             </p>
@@ -279,9 +280,16 @@
 
             <!-- Single Image Comparison Viewer -->
             <div id="singleViewer" class="w-full hidden">
-                <div class="glass-panel rounded-3xl p-2 w-full border border-slate-700/50">
+                <div class="glass-panel rounded-3xl p-1.5 md:p-2 w-full border border-slate-700/50">
                     <div class="relative w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-800"
-                        style="aspect-ratio: 16/9; max-height: 70vh;">
+                        style="aspect-ratio: 4/3; max-height: 70vh;">
+                        <style>
+                            @media (min-width: 768px) {
+                                #singleViewer .relative {
+                                    aspect-ratio: 16/9;
+                                }
+                            }
+                        </style>
                         <!-- Checkboard background for transparent areas -->
                         <div
                             class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzFlMjkzYiI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjMGYxNzJhIi8+PHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiMwZjE3MmEiLz48L3N2Zz4=')] opacity-50">
@@ -296,17 +304,18 @@
                             alt="Original">
 
                         <!-- Badges -->
-                        <div class="absolute top-4 left-4 flex gap-2 z-20">
+                        <div class="absolute top-3 left-3 md:top-4 md:left-4 flex gap-2 z-20">
                             <span id="stateBadge"
-                                class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white/90 text-xs font-medium border border-white/10 shadow-lg transition-colors">Cleaned
+                                class="px-3 py-1.5 md:py-1 rounded-full bg-black/60 backdrop-blur-md text-white/90 text-[10px] md:text-xs font-medium border border-white/10 shadow-lg transition-colors tracking-wide uppercase">Cleaned
                                 Result</span>
                         </div>
 
                         <!-- Compare Button Container -->
-                        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-30">
-                            <button id="compareBtn"
-                                class="px-6 py-3 rounded-full bg-slate-900/80 backdrop-blur-md text-white font-medium border border-slate-700 shadow-xl hover:bg-slate-800 focus:outline-none flex items-center gap-2 transition-all active:scale-95">
-                                <svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor"
+                        <div
+                            class="absolute bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 z-30 w-[90%] md:w-auto max-w-sm">
+                            <button id="compareBtn" style="touch-action: none;"
+                                class="w-full md:w-auto px-6 py-4 md:py-3 rounded-full bg-slate-900/90 backdrop-blur-md text-white font-semibold text-sm md:font-medium border border-teal-500/30 shadow-[0_8px_30px_rgb(0,0,0,0.5)] hover:bg-slate-800 focus:outline-none flex items-center justify-center md:items-center gap-2 transition-all active:scale-95 select-none">
+                                <svg class="w-5 h-5 md:w-5 md:h-5 text-teal-400" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -314,33 +323,33 @@
                                         d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
                                     </path>
                                 </svg>
-                                Hold to see Original
+                                <span>Hold to see Original</span>
                             </button>
                         </div>
                     </div>
                 </div>
+
+                <div
+                    class="flex flex-col md:flex-row items-stretch md:items-center justify-center gap-3 md:gap-4 mt-8 md:mt-10 px-2 md:px-0">
+                    <button id="downloadBtn"
+                        class="w-full md:w-auto justify-center px-8 py-4 md:py-3.5 rounded-2xl md:rounded-xl bg-gradient-to-r from-teal-500 to-blue-500 text-white font-bold text-[15px] hover:shadow-lg hover:shadow-teal-500/25 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                        <span>Download Pure Image</span>
+                    </button>
+                    <button id="resetBtn"
+                        class="w-full md:w-auto justify-center px-8 py-4 md:py-3.5 rounded-2xl md:rounded-xl glass-panel text-slate-300 font-semibold text-[15px] hover:bg-slate-800 hover:text-white transition-all border border-slate-700/50">
+                        Process Another
+                    </button>
+                </div>
             </div>
 
-            <div class="flex items-center justify-center gap-4 mt-8">
-                <button id="downloadBtn"
-                    class="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-teal-500 to-blue-500 text-white font-bold hover:shadow-lg hover:shadow-teal-500/25 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                    </svg>
-                    Download Pure Image
-                </button>
-                <button id="resetBtn"
-                    class="px-8 py-3.5 rounded-2xl glass-panel text-slate-300 font-medium hover:bg-slate-800 transition-all border border-slate-700/50">
-                    Process Another
-                </button>
+            <!-- Batch Grid Viewer -->
+            <div id="batchViewer" class="w-full hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamite generated dynamically -->
             </div>
-        </div>
-
-        <!-- Batch Grid Viewer -->
-        <div id="batchViewer" class="w-full hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Dynamite generated dynamically -->
-        </div>
         </div>
     </main>
 
